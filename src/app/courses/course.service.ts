@@ -8,6 +8,10 @@ export class CourseServices {
     retrieveAll(): Course[] {
         return COURSES;
     }
+
+    retrieveById(id: number): Course {
+        return COURSES.find((courseIterator: Course) => courseIterator.id == id)!;
+    }
 }
 
 var COURSES: Course[] = [
